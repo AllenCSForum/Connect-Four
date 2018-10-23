@@ -35,21 +35,59 @@ p {
 color: black;
 font-size: 17px;
 }
+  
+ .playerBox {
+display: grid;
+grid-template-areas: 
+"player1 txt1 ."
+"player2 txt2 .";
+justify-content: center;
+}
+
+#name1{
+    grid-area: player1;
+    text-align: right;
+    margin-right: 10px;
+}
+#name2 {
+    grid-area: player2;
+    text-align: right;
+    margin-right: 10px;
+
+}
+#enterName1{
+    grid-area: txt1;
+    height: 20px;
+    margin-top: 15px;
+    width: 150px;
+}
+#enterName2 {
+    grid-area: txt2;
+    height: 20px;
+    margin-top: 15px;
+    width: 150px;
+}
+
 
 </style>
 <script src="start.js" defer></script>
 </head>
 <body>
 <h1>Connect 4</h1>
+
+<div class = "playerBox">
+<h3 id = "name1">Player 1</h3>
+<input id = "enterName1" type="text" name="firstplayername">
+</div>
+<div class = "playerBox">
+<h3 id = "name2">Player 2</h3>
+<input id = "enterName2" type="text" name="secondplayername">
+</div>
 <div id = "startbox">
 <button id= "start" type="button">Start</button>
 </div>
-<h3>Player 1</h3>
-<input type="text" name="firstplayername">
-<h3>Player 2</h3>
-<input type="text" name="secondplayername">
 <h2>Instructions</h2>
 <p>The object of the game is to be the first player to get four of your pieces in a row horizontally, vertically,
 or diagonally. Click and drag your color piece one at a time to place it in the board. </p>
-</body>
+<body>
 </html>
